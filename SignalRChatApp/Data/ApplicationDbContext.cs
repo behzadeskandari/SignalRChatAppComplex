@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SignalRChatApp.Models;
 
 namespace SignalRChatApp.Data
 {
@@ -9,5 +10,8 @@ namespace SignalRChatApp.Data
             : base(options)
         {
         }
+
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<ChatRoom> ChatRooms { get; set; }
     }
 }

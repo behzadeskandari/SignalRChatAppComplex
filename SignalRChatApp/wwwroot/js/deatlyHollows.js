@@ -2,7 +2,7 @@
 (function () {
     var cloakSpan = document.getElementById("cloakCounter");
     var stoneSpan = document.getElementById("stoneCounter");
-    var wandSpan = document.getElementById("WandCounter");
+    var wandSpan = document.getElementById("wandCounter");
 
     //create connection
     //,signalR.HttpTransportType.ServerSentEvents

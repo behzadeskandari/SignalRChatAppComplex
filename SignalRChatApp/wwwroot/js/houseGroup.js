@@ -17,9 +17,15 @@ let trigger_ravenclaw = document.getElementById("trigger_ravenclaw");
 
 
 //create connection
+
 var connectionHouse = new signalR.HubConnectionBuilder()
-    //.configureLogging(signalR.LogLevel.Information)
-    .withUrl("/hubs/houseGroup").build();
+    .configureLogging(signalR.LogLevel.Information)
+    .withUrl('/hubs/houseGroupHub').build();
+
+
+//var connectionHouse = new signalR.HubConnectionBuilder()
+//    //.configureLogging(signalR.LogLevel.Information)
+//    .withUrl("/hubs/houseGroupHub").build();
 
 btn_gryffindor.addEventListener("click", function (event) {
     connectionHouse.send("JoinHouse", "Gryffindor");
